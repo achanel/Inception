@@ -2,27 +2,14 @@ FROM debian:buster
 
 #Updating system and installing tools
 RUN apt-get update
-RUN apt-get install -y php php-fpm sudo apt-get install php7.4-common \
-	apt-get install php7.3-iconv \
-	apt-get install php7.3-json \
-	apt-get install php7.3-gd \
-	apt-get install php7.3-xml \
-	apt-get install php7.3-mysql \
-	apt-get install php7.3-imap \
-	apt-get install php7.3-cgi fcgi\
-	apt-get install php7.3-pdo \
-	apt-get install php7.3-soap \
-	apt-get install php7.3-xmlrpc \
-	apt-get install php7.3-posix \
-	apt-get install php7.3-gettext \
-	apt-get install php7.3-ldap \
-	apt-get install php7.3-ctype \
-	apt-get install php7.3-dom \
-	apt-get install php7.3-mbstring \
-	apt-get install php7.3-phar \
-	apt-get install php7.3-curl \
-	apt-get install php7.3-mcrypt \
-	apt-get install php7.3-opache
+RUN apt-get install -y php php-fpm apt-get install php7.4-common \
+	php7.3-iconv php7.3-json php7.3-gd \
+	php7.3-xml php7.3-mysql php7.3-imap \
+	php7.3-cgi fcgi php7.3-pdo php7.3-soap \
+	php7.3-xmlrpc php7.3-posix php7.3-gettext \
+	php7.3-ldap php7.3-ctype php7.3-dom \
+	php7.3-mbstring php7.3-phar php7.3-curl \
+	php7.3-mcrypt php7.3-opache
 
 #Downloading WordPress
 RUN wget https://wordpress.org/latest.tar.gz
