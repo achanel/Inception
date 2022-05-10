@@ -6,8 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+Makefile:4: *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
 
-# Make data base, printed on Sun May  8 17:10:33 2022
+
+# Make data base, printed on Tue May 10 09:11:01 2022
 
 # Variables
 
@@ -36,11 +39,11 @@ MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n003vm6800yx1k/T/vscode-ipc-2ea0b7fa-6a01-490f-ad85-32a965b55748.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n003vm6800yx1k/T/vscode-ipc-469566b3-0dac-406b-9073-b925f59338a1.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.x9h9sa2AHT/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.9NYpRpJ7Il/Render
 # environment
 PATH = /Users/achanel/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/usr/local/munki:~/.dotnet/tools
 # environment
@@ -52,7 +55,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.pfrNTaDTy4/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.58tsPO7aT8/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -118,7 +121,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000003.Electron
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -136,7 +139,7 @@ PAGER = less
 # environment
 LC_ALL = C
 # environment
-SECURITYSESSIONID = 186a7
+SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # default
@@ -148,7 +151,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 9350
+VSCODE_PID = 78785
 # variable set hash-table stats:
 # Load=69/1024=7%, Rehash=0, Collisions=1/85=1%
 
@@ -158,9 +161,9 @@ VSCODE_PID = 9350
 
 # Directories
 
-# . (device 16777227, inode 2651550): 6 files, no impossibilities.
+# . (device 16777227, inode 2651550): 7 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -205,8 +208,6 @@ Makefile:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun May  8 17:10:33 2022
+# Finished Make data base on Tue May 10 09:11:01 2022
 
  
-Makefile:4: *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
-

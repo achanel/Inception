@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# sed -i "s/bind-ad/\#bind-ad" "/etc/mysql/mariadb.conf.d/50-server.cnf"
-
 if [ ! -f "/var/lib/mysql/ib_buffer_pool" ];    then
         /etc/init.d/mariadb setup
         rc-service mariadb start
@@ -26,4 +24,3 @@ fi
 #rc-service mariadb stop
 #
 #/usr/bin/mariadb --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib/mariadb/plugin --user=mysql --pid-file=/run/ mysql/mariadb.pid
-~
