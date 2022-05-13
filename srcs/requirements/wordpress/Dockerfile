@@ -2,6 +2,7 @@ FROM debian:buster
 
 #Updating system and installing tools
 RUN apt-get update
+RUN apt-get install -y openrc
 RUN apt-get install -y wget
 RUN apt-get install -y unzip
 RUN apt-get install -y php php-fpm php-common \
@@ -25,14 +26,14 @@ RUN rm redis-cache.2.0.25.zip
 
 #Adding files to container
 ADD ./conf/object-cache.php /wordpress/wp-content
-COPY conf/wp_config.php /wordpress/wp-config.php
+COPY conf/wp-config.php /wordpress/wp-config.php
 
 RUN openrc
 RUN touch /run/openrc/softlevel
 
 #Adding installing script
 COPY tools/wp_run.sh /
-COPY conf/www.conf /etc/php7.3/php-fpm.d
+COPY conf/www.conf /etc/php/7.4/fpm/php-fpm.conf
 RUN chmod +x ./wp_run.sh
 
 ENTRYPOINT [ "./wp_run.sh" ]

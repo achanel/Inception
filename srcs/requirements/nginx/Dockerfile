@@ -13,8 +13,9 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
         -subj "/C=RU/ST=Tatarstan/L=Kazan/O=21/OU=School/CN=localhost"
 
 COPY ./conf/nginx.conf /etc/nginx/sites-available/
+RUN ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/site.conf
+RUN rm /etc/nginx/sites-enabled/site.conf
 
-COPY tools/nginx_run.sh /
-RUN chmod +x ./nginx_run.sh
+EXPOSE 443
 
-ENTRYPOINT ["./nginx_run.sh"]
+ENTRYPOINT ["nginx", "-g", "daemon off;"]

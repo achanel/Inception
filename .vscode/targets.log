@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 Makefile:4: *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
 
 
-# Make data base, printed on Tue May 10 09:11:01 2022
+# Make data base, printed on Fri May 13 14:16:32 2022
 
 # Variables
 
@@ -39,11 +39,11 @@ MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n003vm6800yx1k/T/vscode-ipc-469566b3-0dac-406b-9073-b925f59338a1.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n003vm6800yx1k/T/vscode-ipc-8db641fa-27ce-4757-8cc8-43bf4f9c9a80.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.9NYpRpJ7Il/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.LMJTZmc74j/Render
 # environment
 PATH = /Users/achanel/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/usr/local/munki:~/.dotnet/tools
 # environment
@@ -55,7 +55,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.58tsPO7aT8/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.EVH0Zo7goZ/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -67,17 +67,17 @@ PWD = /Users/achanel/Desktop/Inception
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # makefile (from `Makefile', line 1)
 HOME = /home/achanel
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/achanel/Library/Application Support/Code/CachedData/899d46d82c4c95423fb7e10e68eba52050e30ba3
+VSCODE_CODE_CACHE_PATH = /Users/achanel/Library/Application Support/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
 # environment
 LOGNAME = achanel
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /Users/achanel/.oh-my-zsh
 # environment
@@ -113,7 +113,7 @@ TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n003vm6800yx1k/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/achanel/Library/Application Support/Code/1.63.2-main.sock
+VSCODE_IPC_HOOK = /Users/achanel/Library/Application Support/Code/1.67.1-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -121,7 +121,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x1000000d.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -139,7 +139,7 @@ PAGER = less
 # environment
 LC_ALL = C
 # environment
-SECURITYSESSIONID = 186a8
+SECURITYSESSIONID = 186fb
 # automatic
 ^F = $(notdir $^)
 # default
@@ -151,7 +151,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 78785
+VSCODE_PID = 61215
 # variable set hash-table stats:
 # Load=69/1024=7%, Rehash=0, Collisions=1/85=1%
 
@@ -161,9 +161,9 @@ VSCODE_PID = 78785
 
 # Directories
 
-# . (device 16777227, inode 2651550): 7 files, no impossibilities.
+# . (device 16777227, inode 2651550): 6 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 6 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -208,6 +208,6 @@ Makefile:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue May 10 09:11:01 2022
+# Finished Make data base on Fri May 13 14:16:32 2022
 
  

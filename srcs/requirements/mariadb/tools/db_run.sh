@@ -1,26 +1,12 @@
-#!/bin/sh
-
-if [ ! -f "/var/lib/mysql/ib_buffer_pool" ];    then
-        /etc/init.d/mariadb setup
-        rc-service mariadb start
-
-        #Getting to new user root priveleges to db in localhost
-        echo "CREATE USER '${MYSQL_USER}'@'localhost' IDENTIFIED BY '${MYSQL_PASS}';" | mysql -u ${MYSQL_ROOT_USER}
-        echo "GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_USER}'@'localhost' IDENTIFIED BY '${MYSQL_PASS}';" | mysql -u ${MYSQL_ROOT_USER}
-        echo "FLUSH PRIVILEGES;" | mysql -u ${MYSQL_ROOT_USER}
-
-        #Getting to new user root priveleges on wp db
-        echo "CREATE USER '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASS}';" | mysql -u ${MYSQL_ROOT_USER}
-        echo "GRANT ALL PRIVILEGES ON wordpress.* TO '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASS}';" | mysql -u ${MYSQL_ROOT_USER}
-        echo "FLUSH PRIVILEGES;" | mysql -u ${MYSQL_ROOT_USER}
-
-        #Change password for root user
-        mysql -u ${MYSQL_ROOT_USER} -e "ALTER USER '${MYSQL_ROOT_USER}'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PASS}';"
+service mysql start
+echo "CREATE DATABASE IF NOT EXISTS $DATABASE_NAME;" | mysql -u root
+echo "DROP USER IF EXISTS 'achanel'@'localhost';" | mysql -u root
+echo "CREATE USER 'achanel'@'localhost' IDENTIFIED BY 'achapas';" | mysql -u root
+echo "GRANT ALL ON *.* TO '$DATABASE_USER'@'localhost' IDENTIFIED BY '$DATABASE_PASS' WITH GRANT OPTION;" | mysql -u root
+echo "flush privileges" | mysql -u root
+if [ ! -d "/var/lib/mysql/wordpress" ]
+then
+        mysql '$DATABASE_NAME' < wordpress.sql
 fi
-
-#
-# sed -i ' s/skip-networking/# skip-networking/g ' /etc/my.cnf.d/mariadb-server.cnf
-#rc-service mariadb restart
-#rc-service mariadb stop
-#
-#/usr/bin/mariadb --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib/mariadb/plugin --user=mysql --pid-file=/run/ mysql/mariadb.pid
+service mysql stop
+/usr/bin/mysqld_safe
