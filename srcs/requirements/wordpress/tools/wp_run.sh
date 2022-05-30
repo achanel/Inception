@@ -1,15 +1,7 @@
-#!/bin/sh
+if ! [ -d "/var/www/wordpress/wp-config.php" ]; then
+    wp core config --dbhost=${DATABASE_HOST} --dbname=${DATABASE_NAME} --dbuser=${DATABASE_USER} --dbpass=${DATABASE_PASS} --allow-root
+    wp core install --url=${DOMAIN_NAME} --title=${TITLE} --admin_user=${MYSQL_ROOT_USER} --admin_password=${MYSQL_ROOT_PASS} --admin_email=${MYSQL_ROOT_EMAIL} --skip-email --allow-root
+    wp user create ${DATABASE_USER} ${MYSQL_USER_EMAIL} --allow-root --role=subscriber --user_pass=${MYSQL_USER_PASS}
+fi
 
-#Database settings
-sed -i 's|DOMAIN_NAME|'${DOMAIN_NAME}'|g' /wordpress/wp-config.php
-sed -i 's|DATABASE_NAME|'${DATABASE_NAME}'|g' /wordpress/wp-config.php
-sed -i 's|DATABASE_USER|'${DATABASE_USER}'|g' /wordpress/wp-config.php
-sed -i 's|DATABASE_PASS|'${DATABASE_PASS}'|g' /wordpress/wp-config.php
-sed -i 's|DATABASE_HOST|'${DATABASE_HOST}'|g' /wordpress/wp-config.php
-
-#Copiing folders to volumes
-cp -r redis-cache/ /wordpress/wp-content/plugins/
-cp -r /wordpress/* /var/www/html/wordpress/
-
-#Listening fo CGI as a deamon
-#php-fpm7.3 -FR
+/usr/sbin/php-fpm7.3 --nodaemonize

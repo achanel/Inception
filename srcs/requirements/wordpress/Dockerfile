@@ -2,38 +2,23 @@ FROM debian:buster
 
 #Updating system and installing tools
 RUN apt-get update
-RUN apt-get install -y openrc
-RUN apt-get install -y wget
-RUN apt-get install -y unzip
-RUN apt-get install -y php php-fpm php-common \
-        php-iconv php-json \
-        php-gd php-curl php-xml php-mysqli php-imap\
-        php-cgi php-pdo php-soap \
-        php-xmlrpc php-posix php-gettext \
-        php-ldap php-ctype php-dom \
-        php-mbstring php-phar \
-        curl
+RUN apt-get -y install php7.3 php-mysqli php-fpm mariadb-client curl
 
-#Downloading WordPress
-RUN wget https://wordpress.org/latest.tar.gz
-RUN tar xvf latest.tar.gz
-RUN rm latest.tar.gz
-
-#Downloading Redis-Cache
-RUN wget https://downloads.wordpress.org/plugin/redis-cache.2.0.25.zip
-RUN unzip redis-cache.2.0.25.zip
-RUN rm redis-cache.2.0.25.zip
-
-#Adding files to container
-ADD ./conf/object-cache.php /wordpress/wp-content
+COPY ./conf/www.conf /etc/php/7.3/fpm/pool.d
 COPY conf/wp-config.php /wordpress/wp-config.php
 
-RUN openrc
-RUN touch /run/openrc/softlevel
+ADD https://ru.wordpress.org/wordpress-5.7.2-ru_RU.tar.gz /var/html/
+RUN cd /var/html && tar -xzvf wordpress-5.7.2-ru_RU.tar.gz
+RUN rm -f /var/html/wordpress-5.7.2-ru_RU.tar.gz
 
-#Adding installing script
-COPY tools/wp_run.sh /
-COPY conf/www.conf /etc/php/7.4/fpm/php-fpm.conf
-RUN chmod +x ./wp_run.sh
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+RUN chmod +x wp-cli.phar
+RUN mv wp-cli.phar /usr/local/bin/wp
 
-ENTRYPOINT [ "./wp_run.sh" ]
+RUN rm -f /var/html/wordpress/wp-config-sample.php
+RUN mkdir /run/php/
+
+WORKDIR /var/html/wordpress
+COPY	/tools/wp_run.sh /
+RUN		chmod +x /wp_run.sh
+CMD		/wp_run.sh

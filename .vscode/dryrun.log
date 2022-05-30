@@ -1,6 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/achanel/Desktop/Inception'
-make: Leaving directory `/Users/achanel/Desktop/Inception'
+make: Entering directory `/Users/macintosh/Desktop/day5'
+make: Leaving directory `/Users/macintosh/Desktop/day5'
  
-Makefile:4: *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
+Makefile:6: *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
 
