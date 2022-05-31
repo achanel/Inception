@@ -1,4 +1,5 @@
-version: "3"
+version: '3.3'
+
 services:
   mariadb:
     restart: always
@@ -6,10 +7,9 @@ services:
     container_name: mariadb
     expose:
       - "3306"
-    env_file:
-      - .env
+    env_file: .env
     networks:
-      - inception
+      - app-network
     volumes:
       - db-volume:/var/lib/mysql
 
@@ -21,10 +21,9 @@ services:
       - "9000"
     depends_on:
       - mariadb
-    env_file:
-      - .env
+    env_file: .env
     networks:
-      - inception
+      - app-network
     volumes:
       - www-volume:/var/www/html/wordpress
 
@@ -32,19 +31,19 @@ services:
     restart: always
     build: ./requirements/nginx
     container_name: nginx
+    hostname: localhost
     depends_on:
       - wordpress
-    env_file:
-      - .env
+    env_file: .env
     ports:
       - "443:443"
     networks:
-      - inception
+      - app-network
     volumes:
       - www-volume:/var/html/wordpress
 
 networks:
-  inception:
+  app-network:
     driver: bridge
 
 volumes:

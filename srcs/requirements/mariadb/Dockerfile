@@ -8,9 +8,8 @@ RUN apt-get install mariadb-server -y
 COPY ./conf/wordpress.sql .
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/
 
-#Opening port
-EXPOSE 3306
-
+#Creating db
 RUN service mysql start && mysql < ./wordpress.sql && rm -f ./wordpress.sql
 
+#Command after conteiner start
 CMD /usr/bin/mysqld_safe

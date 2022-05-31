@@ -1,6 +1,9 @@
 HOME=/home/achanel
 
-all:	volumes build up
+all:	hosts volumes build up
+
+hosts:
+	@sudo sed -i "s/localhost/achanel.42.fr/g" /etc/hosts
 
 rmvolumes:
 		sudo rm -rf $(HOME)/data
@@ -26,6 +29,8 @@ stop:
 		docker-compose -f ./srcs/docker-compose.yml stop
 
 re:		down rmvolumes volumes build up
+
+clean:	down rmvolumes
 
 logs:
 	docker-compose -f ./srcs/docker-compose.yml logs
