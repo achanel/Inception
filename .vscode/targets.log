@@ -8,11 +8,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Thu Jun  2 19:06:48 2022
+# Make data base, printed on Thu Jun  2 20:10:32 2022
+ 
 
 # Variables
 
- 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -38,13 +38,13 @@ MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n003vm6800yx1k/T/vscode-ipc-8c05fd41-9b6f-44dd-a1c0-be0a41db97bd.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n003vm6800yx1k/T/vscode-ipc-0fb7e5a1-be22-44bf-9134-90d0974ed9f0.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.FomryqHXcn/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.B6AoiotQuf/Render
 # environment
-PATH = /Users/achanel/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/munki
+PATH = /Users/achanel/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:/usr/local/munki:~/.dotnet/tools
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
@@ -54,7 +54,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.q2G2vh5hlt/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.OOh4w6kuW5/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -120,13 +120,15 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.1296
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000010.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
 __CF_USER_TEXT_ENCODING = 0xF7432:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
@@ -135,6 +137,8 @@ MAKEFILES :=
 PAGER = less
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 1878a
 # automatic
 ^F = $(notdir $^)
 # default
@@ -146,9 +150,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 18759
+VSCODE_PID = 12099
 # variable set hash-table stats:
-# Load=67/1024=7%, Rehash=0, Collisions=1/94=1%
+# Load=69/1024=7%, Rehash=0, Collisions=1/96=1%
 
 # Pattern-specific Variable Values
 
@@ -156,7 +160,7 @@ VSCODE_PID = 18759
 
 # Directories
 
-# . (device 16777227, inode 2748838): 7 files, no impossibilities.
+# . (device 16777227, inode 2757229): 7 files, no impossibilities.
 
 # 7 files, no impossibilities in 1 directories.
 
@@ -174,7 +178,7 @@ stop:
 	docker-compose -f ./srcs/docker-compose.yml stop
 	
 
-all: hosts volumes build up
+all: hosts build up
 #  Command-line target.
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -200,11 +204,10 @@ up:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-02 19:06:33
+#  Last modified 2022-06-02 20:10:25
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
- 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 start:
@@ -302,7 +305,7 @@ down:
 	
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=3/40=8%
+# Load=15/1024=1%, Rehash=0, Collisions=2/39=5%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -314,6 +317,6 @@ down:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun  2 19:06:48 2022
+# Finished Make data base on Thu Jun  2 20:10:32 2022
 
  
