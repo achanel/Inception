@@ -1,6 +1,6 @@
 HOME=/home/achanel
 
-all:	hosts volumes build up
+all:	hosts build up
 
 hosts:
 	@sudo sed -i "s/localhost/achanel.42.fr/g" /etc/hosts

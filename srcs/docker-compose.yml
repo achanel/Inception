@@ -25,7 +25,7 @@ services:
     networks:
       - app-network
     volumes:
-      - www-volume:/var/www/html/wordpress
+      - www-volume:/var/www/html
 
   nginx:
     restart: always
@@ -40,7 +40,7 @@ services:
     networks:
       - app-network
     volumes:
-      - www-volume:/var/html/wordpress
+      - www-volume:/var/www/html
 
 networks:
   app-network:
