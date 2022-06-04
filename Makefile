@@ -17,7 +17,7 @@ build:
 		docker-compose -f ./srcs/docker-compose.yml build
 
 up:
-		@docker-compose -f ./srcs/docker-compose.yml up -d
+		@docker-compose -f ./srcs/docker-compose.yml up
 
 down:
 		docker-compose -f ./srcs/docker-compose.yml down
@@ -28,16 +28,20 @@ start:
 stop:
 		docker-compose -f ./srcs/docker-compose.yml stop
 
-re:		down rmvolumes build up
+re:		fclean build up
 
 fclean:	down
 		@docker rmi -f $$(docker images -qa);\
 		docker volume rm $$(docker volume ls -q);\
 		docker system prune -a --force
-		sudo rm -Rf /home/${USER}/data/db
-		sudo rm -Rf /home/${USER}/data/wp
+		sudo rm -rf /home/${USER}/data/db
+		sudo rm -rf /home/${USER}/data/wp
+		sudo rm -rf /home/${USER}/data/www
 		mkdir /home/${USER}/data/db
 		mkdir /home/${USER}/data/wp
+		mkdir /home/${USER}/data/www
 
 logs:
 	docker-compose -f ./srcs/docker-compose.yml logs
+
+# @docker-compose -f ./srcs/docker-compose.yml up -d

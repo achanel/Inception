@@ -6,10 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 
-# Make data base, printed on Thu Jun  2 20:10:32 2022
- 
+# Make data base, printed on Sat Jun  4 12:06:19 2022
 
 # Variables
 
@@ -26,11 +24,11 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/achanel/Desktop/Inception
+CURDIR := /Users/macintosh/Desktop/Inception
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"28e4b2fc5bea5ef87b3282b37a99c73f.ru","_translationsConfigFile":"/Users/macintosh/Library/Application Support/Code/clp/28e4b2fc5bea5ef87b3282b37a99c73f.ru/tcf.json","_cacheRoot":"/Users/macintosh/Library/Application Support/Code/clp/28e4b2fc5bea5ef87b3282b37a99c73f.ru","_resolvedLanguagePackCoreLocation":"/Users/macintosh/Library/Application Support/Code/clp/28e4b2fc5bea5ef87b3282b37a99c73f.ru/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247","_corruptedFile":"/Users/macintosh/Library/Application Support/Code/clp/28e4b2fc5bea5ef87b3282b37a99c73f.ru/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
@@ -38,13 +36,13 @@ MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n003vm6800yx1k/T/vscode-ipc-0fb7e5a1-be22-44bf-9134-90d0974ed9f0.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/yx/b8631vwd04d3tl3kzgtgpkd80000gn/T/vscode-ipc-fa228dd4-d7ca-476e-a765-9585e833c3be.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.B6AoiotQuf/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.GfqTqAnpvY/Render
 # environment
-PATH = /Users/achanel/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:/usr/local/munki:~/.dotnet/tools
+PATH = /Users/macintosh/.brew/opt/openjdk@11/bin:/Users/macintosh/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
@@ -54,31 +52,31 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.OOh4w6kuW5/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.bvbZCYhS5z/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-HOMEBREW_TEMP = /tmp/achanel/Homebrew/Temp
+HOMEBREW_TEMP = /tmp/macintosh/Homebrew/Temp
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /Users/achanel/Desktop/Inception
+PWD = /Users/macintosh/Desktop/Inception
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # makefile (from `Makefile', line 1)
 HOME = /home/achanel
 # default
-MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/achanel/Library/Application Support/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /Users/macintosh/Library/Application Support/Code/CachedData/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247
 # environment
-LOGNAME = achanel
+LOGNAME = macintosh
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
-ZSH = /Users/achanel/.oh-my-zsh
+ZSH = /Users/macintosh/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -90,13 +88,13 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-HOMEBREW_CACHE = /tmp/achanel/Homebrew/Caches
+HOMEBREW_CACHE = /tmp/macintosh/Homebrew/Caches
 # environment
 SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
-USER = achanel
+USER = macintosh
 # makefile
 .DEFAULT_GOAL := all
 # environment
@@ -104,15 +102,15 @@ LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
 # environment
-TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n003vm6800yx1k/T/
+TMPDIR = /var/folders/yx/b8631vwd04d3tl3kzgtgpkd80000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/achanel/Library/Application Support/Code/1.67.1-main.sock
+VSCODE_IPC_HOOK = /Users/macintosh/Library/Application Support/Code/1.62.3-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -120,15 +118,13 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000010.Electron
+XPC_SERVICE_NAME = com.microsoft.VSCode.2128
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
-__CF_USER_TEXT_ENCODING = 0xF7432:0x0:0x0
-# environment
-COMMAND_MODE = unix2003
+__CF_USER_TEXT_ENCODING = 0x1F5:0x7:0x31
 # default
 MAKEFILES := 
 # automatic
@@ -137,8 +133,6 @@ MAKEFILES :=
 PAGER = less
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 1878a
 # automatic
 ^F = $(notdir $^)
 # default
@@ -150,9 +144,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 12099
+VSCODE_PID = 596
 # variable set hash-table stats:
-# Load=69/1024=7%, Rehash=0, Collisions=1/96=1%
+# Load=67/1024=7%, Rehash=0, Collisions=1/94=1%
 
 # Pattern-specific Variable Values
 
@@ -160,7 +154,7 @@ VSCODE_PID = 12099
 
 # Directories
 
-# . (device 16777227, inode 2757229): 7 files, no impossibilities.
+# . (device 16777220, inode 2776648): 7 files, no impossibilities.
 
 # 7 files, no impossibilities in 1 directories.
 
@@ -204,7 +198,7 @@ up:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-02 20:10:25
+#  Last modified 2022-06-04 12:06:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -224,6 +218,20 @@ build:
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 17):
 	docker-compose -f ./srcs/docker-compose.yml build
+	
+
+fclean: down
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 34):
+	@docker rmi -f $$(docker images -qa);\
+	docker volume rm $$(docker volume ls -q);\
+	docker system prune -a --force
+	sudo rm -Rf /home/${USER}/data/db
+	sudo rm -Rf /home/${USER}/data/wp
+	mkdir /home/${USER}/data/db
+	mkdir /home/${USER}/data/wp
 	
 
 rmvolumes:
@@ -250,12 +258,7 @@ volumes:
 #  Modification time never checked.
 #  File has not been updated.
 
-re: down rmvolumes volumes build up
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-clean: down rmvolumes
+re: down rmvolumes build up
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -292,7 +295,7 @@ logs:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 36):
+#  commands to execute (from `Makefile', line 43):
 	docker-compose -f ./srcs/docker-compose.yml logs
 	
 
@@ -300,12 +303,13 @@ down:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 #  commands to execute (from `Makefile', line 23):
 	docker-compose -f ./srcs/docker-compose.yml down
 	
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=2/39=5%
+# Load=15/1024=1%, Rehash=0, Collisions=1/37=3%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -317,6 +321,6 @@ down:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun  2 20:10:32 2022
+# Finished Make data base on Sat Jun  4 12:06:19 2022
 
  

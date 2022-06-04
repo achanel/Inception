@@ -1,8 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/achanel/Desktop/Inception'
+make: Entering directory `/Users/macintosh/Desktop/Inception'
 sudo sed -i "s/localhost/achanel.42.fr/g" /etc/hosts
- 
 docker-compose -f ./srcs/docker-compose.yml build
 docker-compose -f ./srcs/docker-compose.yml up -d
-make: Leaving directory `/Users/achanel/Desktop/Inception'
+make: Leaving directory `/Users/macintosh/Desktop/Inception'
  
