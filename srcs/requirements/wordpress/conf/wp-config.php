@@ -18,6 +18,11 @@
  * @package WordPress
  */
 
+define('WP_REDIS_PORT', '6379');
+define('WP_CACHE', true);
+define('WP_REDIS_HOST', 'redis');
+define('WP_CACHE_KEY_SALT', 'DOMAIN_NAME');
+
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'wordpress' );

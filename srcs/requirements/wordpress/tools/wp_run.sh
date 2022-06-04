@@ -26,6 +26,10 @@ echo "Wordpress: creating users..."
 wp core install --allow-root --url=${DOMAIN_NAME} --title=${DATABASE_NAME} --admin_user=${MYSQL_ROOT_USER} --admin_password=${MYSQL_ROOT_PASS} --admin_email=${MYSQL_ROOT_EMAIL};
 wp user create ${MYSQL_USER} ${MYSQL_USER_EMAIL} --user_pass=${MYSQL_USER_PASS} --role=author --allow-root;
 
+echo "Setting up Redis-cache..."
+wp plugin install redis-cache --activate --allow-root
+wp plugin update --all --allow-root
+
 echo "WELL DONE!"
 else
 echo "wp-config is already exist!"
@@ -33,6 +37,7 @@ fi
 
 chown -R www-data:www-data /var/www/html;
 chmod -R 755 /var/www/html;
+wp redis enable --allow-root
 echo "Wordpress is started!"
 
 /usr/sbin/php-fpm7.3 --nodaemonize

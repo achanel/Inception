@@ -42,6 +42,19 @@ services:
     volumes:
       - www-volume:/var/www/html
 
+  redis:
+    restart: always
+    build: requirements/bonus/redis/
+    image: redis
+    container_name: redis
+    ports:
+      - 6379:6379
+    depends_on:
+      - nginx
+    networks:
+      - app-network
+    env_file: .env
+
 networks:
   app-network:
     driver: bridge
