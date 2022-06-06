@@ -50,10 +50,51 @@ services:
     ports:
       - 6379:6379
     depends_on:
+      - wordpress
+    networks:
+      - app-network
+    env_file: .env
+
+  adminer:
+    restart: always
+    build: requirements/bonus/adminer/
+    image: adminer
+    container_name: adminer
+    ports:
+      - 9000:8080
+    depends_on:
       - nginx
     networks:
       - app-network
     env_file: .env
+
+  ftps:
+    restart: always
+    build: requirements/bonus/ftps/
+    image: ftps
+    container_name: ftps
+    ports:
+      - "21:21"
+      - "21000:21000"
+    networks:
+      - app-network
+    env_file: .env
+    volumes:
+      - www-volume:/var/www/html
+
+  portainer:
+    restart: always
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    ports:
+      - "8000:8000"
+      - "9443:9443"
+    env_file: .env
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    security_opt:
+      - no-new-privileges:true
 
 networks:
   app-network:

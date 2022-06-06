@@ -14,9 +14,9 @@ mv wp-cli.phar /usr/local/bin/wp;
 
 cd /var/www/html;
 
-# echo "Setting up static website..."
-# mkdir -p /var/www/html/wordpress/mysite;
-# mv /var/www/index.html /var/www/html/wordpress/mysite/index.html;
+echo "Setting up static website..."
+mkdir -p /var/www/html/wordpress/static;
+mv /var/www/index.html /var/www/html/wordpress/static/index.html;
 
 echo "Setting up wordpress..."
 wp core download --allow-root;

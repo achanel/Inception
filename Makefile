@@ -35,10 +35,8 @@ fclean:	down
 		docker volume rm $$(docker volume ls -q);\
 		docker system prune -a --force
 		sudo rm -rf /home/${USER}/data/db
-		sudo rm -rf /home/${USER}/data/wp
 		sudo rm -rf /home/${USER}/data/www
 		mkdir /home/${USER}/data/db
-		mkdir /home/${USER}/data/wp
 		mkdir /home/${USER}/data/www
 
 logs:
