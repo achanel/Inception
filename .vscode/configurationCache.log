@@ -1,1 +1,0 @@
-{"buildTargets":["all","build","down","fclean","hosts","logs","re","rmvolumes","start","stop","up","volumes"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
