@@ -15,8 +15,8 @@ mv wp-cli.phar /usr/local/bin/wp;
 cd /var/www/html;
 
 echo "Setting up static website..."
-mkdir -p /var/www/html/wordpress/static;
-mv /var/www/index.html /var/www/html/wordpress/static/index.html;
+mkdir -p /var/www/html/wordpress/;
+mv /var/www/index.html /var/www/html/wordpress/index.html;
 
 echo "Setting up wordpress..."
 wp core download --allow-root;
@@ -41,7 +41,3 @@ wp redis enable --allow-root
 echo "Wordpress is started!"
 
 /usr/sbin/php-fpm7.3 --nodaemonize
-
-# wp core config --dbhost=${DATABASE_HOST} --dbname=${DATABASE_NAME} --dbuser=${DATABASE_USER} --dbpass=${DATABASE_PASSWORD} --allow-root
-# wp core install --url=${DOMAIN_NAME} --title=${TITLE} --admin_user=${MYSQL_ROOT_USER} --admin_password=${MYSQL_ROOT_PASS} --admin_email=${MYSQL_ROOT_EMAIL} --skip-email --allow-root
-# wp user create ${MYSQL_USER} ${MYSQL_USER_EMAIL} --allow-root --role=subscriber --user_pass=${MYSQL_USER_PASS}
