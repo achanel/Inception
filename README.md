@@ -29,9 +29,9 @@ will have to justify your choice.
 
 # RUN
 
-* 1:
+* 1 Run:
 ```bash
-c++ -std=c++98 -Wall -Wextra -Werror main_vector.cpp
+make
 ```
 * 2:
 Open: https://achanel.42.fr/
