@@ -5,7 +5,7 @@
 
 # SUMMARY
 
-[x] Mandatory part
+- [x] Mandatory part
 
 You then have to set up:
 
@@ -22,7 +22,7 @@ configured) only without nginx.
 
 • A docker-network that establishes the connection between your containers.
 
-[x] Bonus part
+- [x] Bonus part
 
 • Set up redis cache for your WordPress website in order to properly manage the
 cache.
